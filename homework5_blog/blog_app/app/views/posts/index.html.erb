@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+
+<div class="container">
+ <div class="row">
+    <h1>All Posts</h1>
+      <div class="row col-12 justify-content-around">
+
+        <% @posts.each do |post| %>
+          <div class='card-block'>
+            <div class='card' style="width:19rem;">
+
+              <%= link_to post.title, post_path(post) %>
+              <img class='card-img-top' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjYTnww26KMZQqGxIz_3WcFgevk04NC9qLRTeWOMHcjgxGuuq">
+              <p><% post.body%></p>
+            </div>
+            <hr>
+          </div>
+        <% end %>
+  </div>
+</div>
