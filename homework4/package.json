@@ -1,0 +1,34 @@
+{
+  "name": "homework4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "db:create": "createdb --echo cohorts",
+    "db:drop": "dropdb --echo --if-exists cohorts",
+    "db:migrate": "node db/migration.js"
+
+  },
+  "keywords": [
+    "random",
+    "name",
+    "generator",
+    "homework"
+  ],
+  "author": "Sam Bukhari",
+  "license": "MIT ",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "knex": "^0.13.0",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "pg": "^7.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
