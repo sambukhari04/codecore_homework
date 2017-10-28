@@ -14,7 +14,25 @@ Rails.application.routes.draw do
   #
   # patch('posts/:id', to: 'posts#update')
   # delete('posts/:id', to: 'posts#destroy')
+  # resources :users, only: [:new, :create, :edit, :destroy]
 
+
+
+  resources :users
+
+  get '/change_password' => 'users#change_password'
+  patch '/change_password' => 'users#update_password', as: 'update_password'
+
+  resource :session, only: [:new, :create, :destroy]
   resources :posts
+
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
+
+  namespace :admin do
+    resources :dashboard, only: [:index]
+  end
+
 
 end
