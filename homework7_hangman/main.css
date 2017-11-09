@@ -1,0 +1,33 @@
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.letter {
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 80px;
+  background-color: pink;
+  margin:5px 5px 5px 5px;
+  font-family: sans-serif;
+}
+
+.highlight{
+background-color: orange;
+
+}
+
+.container{
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 2px;
+  border-bottom: 1px solid black;
+
+}
+
+.selected{
+  background-color: red;
+}

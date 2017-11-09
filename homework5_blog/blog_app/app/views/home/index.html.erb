@@ -1,0 +1,41 @@
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-sm-12">
+      <div class="content-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjYTnww26KMZQqGxIz_3WcFgevk04NC9qLRTeWOMHcjgxGuuq" style="width:600px;">
+        <h2>Post Title</h2>
+        <p>His feet don’t get blisters, but his shoes do. His shirts never wrinkle. When he meets the Pope, the Pope kisses his ring. The Nobel Academy was awarded a prize from HIM</p>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="content-container">
+        <h2>Most Liked</h2>
+        <ul class="list-group">
+          <% @posts.each do |post|%>
+          <li class="list-group-item"><%= link_to post.title, post_path(post) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <br>
+
+    <div class="row">
+        <% @posts.each do |post|  %>
+        <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+            <div class="post content-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjYTnww26KMZQqGxIz_3WcFgevk04NC9qLRTeWOMHcjgxGuuq">
+            <h4><%= link_to post.title, post_path(post) %></h4>
+            <p><%= post.body %></p>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
