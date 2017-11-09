@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   end
 
   def change_password
-    puts "here"
+
     @user = current_user
   end
 
